@@ -1,0 +1,69 @@
+
+---
+
+## 🎨 Features
+
+### ✔ Clean, Modern UI  
+Professional layout with responsive design for all screen sizes.
+
+### ✔ Fast Loading  
+No heavy frameworks; only HTML, CSS, and vanilla JavaScript.
+
+### ✔ Microsoft 365 Focus  
+Tailored for users facing issues with:
+- Microsoft Planner  
+- Office 365 apps (Teams, Outlook, Excel, Word)  
+- Power Automate automation flows  
+
+### ✔ Contact Form  
+Simple form with client-side validation & success alert.
+
+### ✔ GitHub Pages Compatible  
+Fully optimized for deployment via GitHub Pages.
+
+---
+
+## 🔧 Technologies Used
+
+- **HTML5**  
+- **CSS3** (modern responsive styling)  
+- **JavaScript (Vanilla)**  
+- **GitHub Pages Hosting**  
+
+---
+
+## 📦 Deployment Instructions
+
+To publish your website using GitHub Pages:
+
+1. Push all files to your GitHub repo:  
+   `shyamschaudhury-maker.github.io`
+
+2. Go to **Settings → Pages**
+
+3. Under **Source**, select:
+   - **Branch:** `main`
+   - **Folder:** `/ (root)`
+
+4. Save and wait 10–20 seconds.
+
+Your site will go live automatically at:  
+**https://shyamschaudhury-maker.github.io**
+
+---
+
+## ✨ Author
+
+**Shyam S. Chaudhury**  
+Microsoft Planner & Office 365 Support Specialist  
+Providing fast, reliable troubleshooting and guided support.
+
+---
+
+## 📄 License
+
+This project is open-source and free for personal or educational use.
+
+---
+
+If you want help creating a **logo**, **favicon**, or a **professional About page description**, just tell me — I can generate all of them.
