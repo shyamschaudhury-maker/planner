@@ -1,54 +1,42 @@
-// Smooth Scroll for Navigation Links
-document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", function (e) {
-    if (this.getAttribute("href").startsWith("#")) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute("href"));
-      if (target) {
-        window.scrollTo({
-          top: target.offsetTop - 70,
-          behavior: "smooth"
-        });
-      }
-    }
-  });
+// Smooth Scroll (for internal links)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+    });
 });
 
-// Mobile Menu Toggle (Future-ready if you add mobile nav)
-const mobileMenuBtn = document.querySelector(".mobile-toggle");
+// Mobile Navbar Toggle (future-safe)
+const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
 
-if (mobileMenuBtn) {
-  mobileMenuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-  });
+if (navToggle) {
+    navToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+    });
 }
 
-// FAQ Toggle
-document.querySelectorAll(".faq-box").forEach(faq => {
-  faq.addEventListener("click", () => {
-    faq.classList.toggle("active");
-    const answer = faq.querySelector("p");
-    if (faq.classList.contains("active")) {
-      answer.style.maxHeight = answer.scrollHeight + "px";
-    } else {
-      answer.style.maxHeight = "0px";
+// Add Active Page Highlighting
+const currentPage = window.location.pathname.split("/").pop();
+document.querySelectorAll(".nav-links a").forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
     }
-  });
 });
 
-// Contact Form Validation (optional enhancement)
-const form = document.querySelector(".contact-form");
+// Contact Form Submission (Demo Only)
+const contactForm = document.querySelector("form");
 
-if (form) {
-  form.addEventListener("submit", function (e) {
-    const name = form.querySelector("input[name='name']");
-    const email = form.querySelector("input[name='email']");
-    const message = form.querySelector("textarea[name='message']");
+if (contactForm) {
+    contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
 
-    if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
-      e.preventDefault();
-      alert("Please fill in all fields before submitting.");
-    }
-  });
+        alert("Your message has been sent! I will get back to you shortly.");
+        contactForm.reset();
+    });
 }
